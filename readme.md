@@ -1,7 +1,7 @@
 
 ```
 # set vm id
-id=100
+id=101
 
 # create image directory, download and uncomporess
 mkdir -p /var/lib/vz/images/${id}
