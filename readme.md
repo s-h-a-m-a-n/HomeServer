@@ -1,4 +1,5 @@
 
+```
 # set vm id
 id=100
 
@@ -28,3 +29,4 @@ qm create ${id} \
   --serial0 socket \
   --serial1 socket \
   --tablet 1
+```
