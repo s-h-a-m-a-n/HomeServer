@@ -34,5 +34,7 @@ qm create ${id} \
   --serial0 socket \
   --serial1 socket \
   --tablet 1
-qm set ${id} -virtio2 /dev/disk/sda
+qm set ${id} -virtio2 /dev/disk/by-id/ata-Samsung_SSD_850_EVO_1TB_S2RENX0J700317F
+qm set ${id} -virtio2 /dev/disk/by-id/ata-Samsung_SSD_860_EVO_1TB_S4FMNF0NB07207L
+qm set ${id} -virtio2 /dev/disk/by-id/ata-WDC_WD20EFRX-68EUZN0_WD-WCC4M7HZUSR7
 ```
