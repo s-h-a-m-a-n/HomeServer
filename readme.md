@@ -1,5 +1,7 @@
 ```
 lsblk --output NAME,FSTYPE,LABEL,UUID,MODE
+
+ls -l /dev/disk/by-id/
 ```
 
 ```
