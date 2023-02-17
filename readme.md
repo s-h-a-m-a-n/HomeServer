@@ -1,3 +1,6 @@
+```
+lsblk --output NAME,FSTYPE,LABEL,UUID,MODE
+```
 
 ```
 # set vm id
@@ -29,4 +32,5 @@ qm create ${id} \
   --serial0 socket \
   --serial1 socket \
   --tablet 1
+qm set ${id} -virtio2 /dev/disk/by-id/0x5fb0ffa3
 ```
