@@ -39,3 +39,25 @@ qm set ${id} -sata1 /dev/disk/by-id/ata-Samsung_SSD_850_EVO_1TB_S2RENX0J700317F,
 qm set ${id} -sata2 /dev/disk/by-id/ata-Samsung_SSD_860_EVO_1TB_S4FMNF0NB07207L,ssd=1
 qm set ${id} -sata3 /dev/disk/by-id/ata-WDC_WD20EFRX-68EUZN0_WD-WCC4M7HZUSR7
 ```
+
+```
+Login: tc
+Password: P@ssw0rd
+ssh ts@IP
+
+./rploader.sh update now
+./rploader.sh fullupgrade now
+./rploader.sh satamap now
+./rploader.sh identifyusb now
+./rploader.sh serialgen ds3622xs+
+./rploader.sh ext ds3622xsp-7.2.0-64570 add https://github.com/pocopico/tcrp-addons/raw/main/all-modules/rpext-index.json
+./rploader.sh ext ds3622xsp-7.2.0-64570 add https://github.com/pocopico/tcrp-addons/raw/main/eudev/rpext-index.json
+./rploader.sh backup
+./rploader.sh build ds3622xsp-7.2.0-64570 withfriend
+
+open and check user_config.json
+
+sudo reboot -f
+```
+
+https://xpenology.com/forum/topic/65363-установка-dsm-711-на-proxmox/
