@@ -29,7 +29,7 @@ qm create ${id} \
   --onboot 0 \
   --ostype l26 \
   --scsihw virtio-scsi-pci \
-  
+  --cpu kvm64 \
   --sockets 1 \
   --serial0 socket \
   --serial1 socket \
