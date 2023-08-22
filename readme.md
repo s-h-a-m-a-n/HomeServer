@@ -19,17 +19,16 @@ pvesm alloc local-lvm ${id} vm-${id}-disk-0 25G
 # create vm
 qm create ${id} \
   --args "-drive 'if=none,id=synoboot,format=raw,file=/var/lib/vz/images/${id}/tinycore-redpill.img' -device 'qemu-xhci,addr=0x18' -device 'usb-storage,drive=synoboot,bootindex=1'" \
-  --cores 2 \
-  --cpu host \
+  --cores 6 \
+  --cpu kvm64 \
   --machine q35 \
-  --memory 4096 \
+  --memory 8192 \
   --name DSM7 \
   --net0 virtio,bridge=vmbr0 \
   --numa 0 \
   --onboot 0 \
   --ostype l26 \
   --scsihw virtio-scsi-pci \
-  --cpu kvm64 \
   --sockets 1 \
   --serial0 socket \
   --serial1 socket \
